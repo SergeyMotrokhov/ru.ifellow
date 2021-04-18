@@ -20,15 +20,12 @@ public class AboutUsPage {
         SoftAssertions softy = new SoftAssertions();
         ElementsCollection linksAboutUsElements = getLinksAboutUsElements();
         int size = linksAboutUsElements.size();
-        List<String> list = getListTextFromElementsCollection(linksAboutUsElements);
         for (int i = 0; i < size; i++) {
             try {
                 linksAboutUsElements.get(i).shouldBe(visible).click();
                 sleep(SLEEP);
                 String linkAboutUs = linksAboutUsElements.get(i).getText();
-                if (list.get(i).equals(linkAboutUs)) {
-                    assertionHeaders(softy, linkAboutUs);
-                }
+                assertionHeaders(softy, linkAboutUs);
             } catch (StaleElementReferenceException e) {
                 e.getCause();
             }
