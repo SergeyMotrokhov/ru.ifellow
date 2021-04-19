@@ -26,8 +26,8 @@ public class UISteps {
     }
 
 
-    @Step("Проверка переходов по ссылкам в меню 'О нас'")
-    public static void goLinksAboutUsPageStep() {
+    @Step("Проверка переходов по ссылкам в меню 'О нас' и соответствия заголовков")
+    public static void assetionHeadersAboutUsPageStep() {
         goLinksAboutUs();
     }
 }

@@ -9,10 +9,10 @@ import static steps.ui.UISteps.*;
 public class UITests extends BaseTest {
 
     @Test
-    @Description(value = "Проверка переходов по ссылкам 'О нас' на сайте " + URL)
+    @Description(value = "Проверка переходов по ссылкам 'О нас' и соответствия заголовков на сайте " + URL)
     public void aboutUsTest() {
         goMainPageStep();
         goAboutUsPageStep();
-        goLinksAboutUsPageStep();
+        assetionHeadersAboutUsPageStep();
     }
 }

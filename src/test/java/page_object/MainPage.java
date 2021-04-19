@@ -3,11 +3,12 @@ package page_object;
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
+import static helper.Helper.URL;
 
 public class MainPage {
 
     public static void openMainPage() {
-        Selenide.open("https://ifellow.ru/");
+        Selenide.open(URL);
         $(By.xpath("//button[@class='app-close']")).click();
     }
 

@@ -34,7 +34,7 @@ public class AboutUsPage {
     }
 
     private static void assertionHeaders(SoftAssertions softy, String link) {
-        List<String> listHeaders = getListTextFromElementsCollection(getHeaderAboutUsElement());
+        List<String> listHeaders = getListTextFromElementsCollection(getHeaderAboutUsElements());
         String header = listHeaders.get(0);
         softy.assertThat(header).as("Header <%s> должен содержать текст <%s>", header, link).contains(link);
     }
@@ -51,7 +51,7 @@ public class AboutUsPage {
         return $$(By.xpath("//*[@class='page-bottom-nav']//a"));
     }
 
-    private static ElementsCollection getHeaderAboutUsElement() {
+    private static ElementsCollection getHeaderAboutUsElements() {
         return $$(By.xpath("//*[contains(@href, 'about-us')]/following-sibling::div/h1"));
     }
 
